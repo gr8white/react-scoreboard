@@ -41,6 +41,7 @@ class App extends Component {
   }
 
   handleScoreChange = (index, delta) => {
+    if (this.state.players[index].score === 0 && delta <= 0) return;
     this.setState( prevState => ({
       score: prevState.players[index].score +=  delta
     }));
