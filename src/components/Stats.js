@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Stats = (props) => {
+const Stats = ({players}) => {
   
-  const totalPlayers = props.players.length
+  const totalPlayers = players.length
 
-  const totalScore = props.players.reduce((total, player) => {
+  const totalScore = players.reduce((total, player) => {
     return total + player.score
   }, 0) //the 0 represents the starting value when this function is called
   
